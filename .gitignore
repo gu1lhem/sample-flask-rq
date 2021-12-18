@@ -1,0 +1,11 @@
+# Python
+*.pyc
+
+# Virtual Environment
+env/
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode
