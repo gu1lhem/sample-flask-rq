@@ -24,12 +24,12 @@ from tasks import task_in_background
 
 @app.route("/task")
 def add_task():
-  if request.args.get("n"):
-    job= q.enqueue(task_in_background, request.args.get("n"))
-    q_len = len(q)
-    return f"The task {job.id} is added into the task queue at {job.enqueued_at}. {q_len} task in the queue"
+    if request.args.get("n"):
+        job= q.enqueue(task_in_background, request.args.get("n"))
+        q_len = len(q)
+        return f"The task {job.id} is added into the task queue at {job.enqueued_at}. {q_len} task in the queue"
 
-  return "Add a task by specifing n=something"
+    return "Add a task by specifing n=something"
  
 if __name__ == "__main__":
-  app.run()
+    app.run()
