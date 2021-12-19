@@ -21,12 +21,13 @@ logger = logging.getLogger(__name__)
 logger.warning('Started app.py!')
 
 from tasks import task_in_background
-print("app !!!")
+
 @app.route("/task")
 def add_task():
     if request.args.get("n"):
-        job= q.enqueue(task_in_background, request.args.get("n"))
+        job = q.enqueue(task_in_background, request.args.get("n"))
         q_len = len(q)
+        print(job)
         return f"The task {job.id} is added into the task queue at {job.enqueued_at}. {q_len} task in the queue"
 
     return "Add a task by specifing n=something"
