@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 logger.warning('Started app.py!')
 
 from tasks import task_in_background
-
+print("app !!!")
 @app.route("/task")
 def add_task():
     if request.args.get("n"):
