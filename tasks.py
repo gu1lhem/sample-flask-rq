@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 # Create a working task queue
 def task_in_background(t):
     # print goes into the runner's sysout, logger goes into the log file.
+    print('Started task_in_background.py!')
     logger.info('Started task_in_background.py!')
     delay = 1
     print("Running Task")
