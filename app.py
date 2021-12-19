@@ -24,9 +24,8 @@ from tasks import task_in_background
 
 @app.route("/task")
 def add_task():
-    print("task")
     if request.args.get("n"):
-        print("n = " + request.args.get("n"))
+        print(q)
         job = q.enqueue(task_in_background, request.args.get("n"))
         q_len = len(q)
         print(job)
