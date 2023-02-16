@@ -8,5 +8,5 @@ MarkupSafe==2.0.1
 python-dotenv==0.19.2
 redis==4.0.2
 rq==1.10.1
-Werkzeug==2.0.2
+Werkzeug==2.2.3
 wrapt==1.13.3
